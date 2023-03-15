@@ -1,2 +1,1 @@
 localhost ansible_connection=local
-10.0.2.15 ansible_user=prasanna ansible_password=prasanna
