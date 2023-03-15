@@ -11,7 +11,7 @@ public class ScientificCalculator {
 
     public static long factorial(int num)
     {
-        long fact = 1;653
+        long fact = 1;
         for (int i = 1; i <= num; i++) {
             fact *= i;
         }
