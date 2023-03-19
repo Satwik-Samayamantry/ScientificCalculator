@@ -7,3 +7,5 @@
         name: satwik14/scientific_calculator
         tag: latest
         source: pull
+    - name: running container
+      shell: docker run -it -d satwik14/scientific_calculator
