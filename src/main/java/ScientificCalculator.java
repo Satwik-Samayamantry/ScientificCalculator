@@ -1,31 +1,60 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 import java.lang.Math;
 
 
 public class ScientificCalculator {
 
+    private static final Logger logger = LogManager.getLogger(ScientificCalculator.class);
     public static double sq_root(double num)
     {
-        return Math.sqrt(num);
+        if(num < 0){
+            logger.error("[ERROR - SQRT] - square root function is given -ve number");
+            return -1;
+        }
+
+        double temp = Math.sqrt(num);
+        logger.info("[SQRT] - " + num);
+        logger.info("[RESULT - SQRT] - " + temp);
+        return temp;
     }
 
     public static long factorial(int num)
     {
+        if(num < 0){
+            logger.error("[ERROR - SQRT] - square root function is given -ve number");
+            return -1;
+        }
+
         long fact = 1;
         for (int i = 1; i <= num; i++) {
             fact *= i;
         }
+        logger.info("[FACTORIAL] - " + num);
+        logger.info("[RESULT - FACTORIAL] - " + fact);
         return fact;
     }
 
     public static double log(double num)
     {
-        return Math.log(num);
+        if(num < 0){
+            logger.error("[ERROR - LOG] - natural log function does not work with -ve number");
+            return -1;
+        }
+        double temp = Math.log(num);
+        logger.info("[LOG] - " + num);
+        logger.info("[RESULT - LOG] - " + temp);
+        return temp;
     }
 
     public static double power(double base, double exponent)
     {
-        return Math.pow(base, exponent);
+        double temp = Math.pow(base, exponent);
+        logger.info("[POWER] - " + base + ", " + exponent);
+        logger.info("[RESULT - POWER] - " + temp);
+        return temp;
     }
 
     public static void main(String[] args) {
