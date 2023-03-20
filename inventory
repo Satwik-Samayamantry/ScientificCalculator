@@ -1,1 +1,1 @@
-localhost ansible user = satwik
+localhost ansible_hosts = all
