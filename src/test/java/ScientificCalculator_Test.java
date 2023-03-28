@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import java.math.BigInteger;
 
 public class ScientificCalculator_Test {
 
@@ -18,12 +19,12 @@ public class ScientificCalculator_Test {
 
     @Test
     public void factorialTest1(){
-        assertEquals(6, scientificCalculator.factorial(3), 1e-15);
+        assertEquals(BigInteger.valueOf(6), scientificCalculator.factorial(3));
     }
 
     @Test
     public void factorialTest2(){
-        assertEquals(120, scientificCalculator.factorial(5), 1e-15);
+        assertEquals(BigInteger.valueOf(120), scientificCalculator.factorial(5));
     }
 
     @Test

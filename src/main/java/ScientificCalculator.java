@@ -23,11 +23,11 @@ public class ScientificCalculator {
         return temp;
     }
 
-    public static long factorial(int num)
+    public static BigInteger factorial(int num)
     {
         if(num < 0){
             logger.error("[ERROR - SQRT] - square root function is given -ve number");
-            return -1;
+            return BigInteger.valueOf(-1);
         }
 
         BigInteger fact = BigInteger.valueOf(1);
@@ -86,8 +86,8 @@ public class ScientificCalculator {
                 case 2:
                     System.out.print("Enter a non-negative integer: ");
                     int num2 = input.nextInt();
-                    long fact = factorial(num2);
-                    System.out.printf("The factorial of %d is %d\n", num2, fact);
+                    BigInteger fact = factorial(num2);
+                    System.out.println("The factorial of "+ num2 +" is " +fact);
                     break;
 
                 case 3:
