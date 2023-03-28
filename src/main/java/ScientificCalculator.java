@@ -3,6 +3,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
 import java.lang.Math;
+import java.math.BigInteger;
 
 
 public class ScientificCalculator {
@@ -28,10 +29,11 @@ public class ScientificCalculator {
             return -1;
         }
 
-        long fact = 1;
+        BigInteger fact = BigInteger.valueOf(1);
         for (int i = 1; i <= num; i++) {
-            fact *= i;
+            fact = fact.multiply(BigInteger.valueOf(i));
         }
+
         logger.info("[FACTORIAL] - " + num);
         logger.info("[RESULT - FACTORIAL] - " + fact);
         return fact;
