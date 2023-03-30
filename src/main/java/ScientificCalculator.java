@@ -6,7 +6,7 @@ import java.lang.Math;
 import java.math.BigInteger;
 
 // Added comment to push
-
+// Testing before demo
 public class ScientificCalculator {
 
     private static final Logger logger = LogManager.getLogger(ScientificCalculator.class);
